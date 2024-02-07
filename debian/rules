@@ -1,0 +1,35 @@
+#!/usr/bin/make -f
+
+SHELL := /bin/bash
+
+override_dh_auto_build:
+	$(MAKE) \
+		NO_PYTHON=1
+	python3 ./pylibfdt/setup.py build
+
+override_dh_auto_install:
+	$(MAKE) install \
+		NO_PYTHON=1 \
+		PREFIX=/usr \
+		DESTDIR=$(CURDIR)/debian/tmp \
+		LIBDIR=/usr/lib/$(DEB_HOST_MULTIARCH)
+	python3 ./pylibfdt/setup.py install \
+		--install-layout=deb \
+		--no-compile \
+		--root=debian/tmp
+	find debian/tmp/usr/lib/python*/*-packages -type f -name '*.pyc' -exec rm -rf {} \;
+	fdupes -qnrps debian/tmp/usr/lib/python*/*-packages
+
+	# fixup for bionic
+	mkdir -p debian/tmp/usr/lib/python3/dist-packages
+	mv debian/tmp/usr/lib/python*/site-packages/* debian/tmp/usr/lib/python3/dist-packages/ || echo $$?
+
+override_dh_shlibdeps:
+	dh_shlibdeps -- -llibfdt
+
+override_dh_auto_test:
+
+override_dh_auto_clean:
+
+%:
+	dh $@
