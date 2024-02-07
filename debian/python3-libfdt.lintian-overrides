@@ -1,0 +1,4 @@
+python3-libfdt: copyright-without-copyright-notice
+python3-libfdt: initial-upload-closes-no-bugs
+python3-libfdt: python-package-missing-depends-on-python
+python3-libfdt: zero-byte-file-in-doc-directory
