@@ -1,0 +1,5 @@
+dtc source: file-without-copyright-information
+dtc source: no-debian-changes
+dtc source: not-binnmuable-any-depends-any
+dtc source: python3-depends-but-no-python3-helper
+dtc source: weak-library-dev-dependency

@@ -22,3 +22,6 @@ lex.yy.c
 # cscope files
 cscope.*
 ncscope.*
+
+/build
+*.egg-info

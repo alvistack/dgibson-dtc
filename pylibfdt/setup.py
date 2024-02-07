@@ -50,7 +50,7 @@ libfdt_module = Extension(
 
 setup(
     name='libfdt',
-    version=get_version(),
+    version='1.6.1',
     author='Simon Glass <sjg@chromium.org>',
     description='Python binding for libfdt',
     ext_modules=[libfdt_module],
