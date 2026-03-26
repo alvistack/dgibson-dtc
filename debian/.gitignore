@@ -1,0 +1,9 @@
+*.substvars
+*debhelper*
+.debhelper
+device-tree-compiler
+files
+libfdt-dev
+libfdt1
+python3-libfdt
+tmp
