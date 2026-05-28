@@ -1,0 +1,7 @@
+libfdt-dev: copyright-without-copyright-notice
+libfdt-dev: initial-upload-closes-no-bugs
+libfdt-dev: lacks-versioned-link-to-shared-library
+libfdt-dev: link-to-shared-library-in-wrong-package
+libfdt-dev: missing-dependency-on-libc
+libfdt-dev: package-name-doesnt-match-sonames
+libfdt-dev: zero-byte-file-in-doc-directory

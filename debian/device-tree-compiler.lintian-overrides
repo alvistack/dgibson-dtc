@@ -1,0 +1,4 @@
+device-tree-compiler: copyright-without-copyright-notice
+device-tree-compiler: initial-upload-closes-no-bugs
+device-tree-compiler: no-manual-page
+device-tree-compiler: zero-byte-file-in-doc-directory
